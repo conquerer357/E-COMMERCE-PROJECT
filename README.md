@@ -104,8 +104,6 @@ g. Tableau Dashboard Preview
 _____________________________
 
 Final Tableau dashboard integrating all major KPIs and insights.
-![Tableau Dashboard Preview](docs/Tableau_Dashboard_Summary.png)
-
 -📎 View on Tableau Public- https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
 
 
