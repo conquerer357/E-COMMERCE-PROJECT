@@ -1,0 +1,35 @@
+shape: (128975, 24)
+columns: index,Order ID,Date,Status,Fulfilment,Sales Channel ,ship-service-level,Style,SKU,Category,Size,ASIN,Courier Status,Qty,currency,Amount,ship-city,ship-state,ship-postal-code,ship-country,promotion-ids,B2B,fulfilled-by,Unnamed: 22
+
+nulls per column:
+index                     0
+Order ID                  0
+Date                      0
+Status                    0
+Fulfilment                0
+Sales Channel             0
+ship-service-level        0
+Style                     0
+SKU                       0
+Category                  0
+Size                      0
+ASIN                      0
+Courier Status         6872
+Qty                       0
+currency               7795
+Amount                 7795
+ship-city                33
+ship-state               33
+ship-postal-code         33
+ship-country             33
+promotion-ids         49153
+B2B                       0
+fulfilled-by          89698
+Unnamed: 22           49050
+
+numeric summary:
+                     count           mean            std       min       25%       50%       75%       max
+index             128975.0   64487.000000   37232.019822       0.0   32243.5   64487.0   96730.5  128974.0
+Qty               128975.0       0.904431       0.313354       0.0       1.0       1.0       1.0      15.0
+Amount            121180.0     648.561465     281.211687       0.0     449.0     605.0     788.0    5584.0
+ship-postal-code  128942.0  463966.236509  191476.764941  110001.0  382421.0  500033.0  600024.0  989898.0

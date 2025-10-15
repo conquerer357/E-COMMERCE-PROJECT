@@ -1,0 +1,5 @@
+"fulfilment","cancel_type","orders","pct_within_fulfilment","avg_amount"
+"Amazon","Cancelled After Billing","5630","49.08","662.36"
+"Amazon","Cancelled Before Billing","5841","50.92","0"
+"Merchant","Cancelled After Billing","5136","74.86","621.14"
+"Merchant","Cancelled Before Billing","1725","25.14","0"
