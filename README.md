@@ -51,67 +51,69 @@ ________________
 e. Project Structure
 _____________________
 
-E-COMMERCE PROJECT/
+
+Project Structure
+
+E-COMMERCE-PROJECT/
 │
 ├── data/
-│   └── raw/
-│       ├── Amazon Sale Report.csv
-│       ├── Cloud Warehouse.csv
-│       ├── Expense IIGF.csv
-│       ├── International Sale Report.csv
-│       ├── May-2022.csv
-│       └── P L March 2021.csv
+│ └── raw/
+│ ├── Amazon Sale Report.csv
+│ ├── Cloud Warehouse.csv
+│ ├── Expense IIGF.csv
+│ ├── International Sale Report.csv
+│ ├── May-2022.csv
+│ └── P L March 2021.csv
 │
 ├── export/
-│   ├── cancellations_story.csv
-│   ├── monthly_revenue.csv
-│   ├── TOP_SKUS_BY_REVENUE.csv
-│   ├── cancellations_by_state.csv
-│   ├── cancellation_pre_post_billing.csv
-│   └── cancellations_by_fulfillment.csv
+│ ├── cancellations_story.csv
+│ ├── monthly_revenue.csv
+│ ├── TOP_SKUS_BY_REVENUE.csv
+│ ├── cancellations_by_state.csv
+│ ├── cancellation_pre_post_billing.csv
+│ └── cancellations_by_fulfillment.csv
 │
 ├── docs/
-│   ├── schema_audit.txt
-│   ├── EXCEL_DASHBOARD_SUMMARY.png
-│   └── Tableau_Dashboard_Summary.png
+│ ├── schema_audit.txt
+│ ├── EXCEL_DASHBOARD_SUMMARY.png
+│ └── Tableau_Dashboard_Summary.png
 │
 ├── EXCEL/
-│   └── Project.xlsx
+│ └── Project.xlsx
 │
 ├── python/
-│   ├── data_cleaning.py
-│   └── intro.py
+│ ├── data_cleaning.py
+│ └── intro.py
 │
 ├── sql/
-│   ├── monthly_revenue.sql
-│   ├── cancellations_by_state.sql
-│   ├── cancellations_story.sql
-│   ├── cancellation_pre_post_billing.sql
-│   └── TOP_SKUS_BY_REVENUE.sql
+│ ├── monthly_revenue.sql
+│ ├── cancellations_by_state.sql
+│ ├── cancellations_story.sql
+│ ├── cancellation_pre_post_billing.sql
+│ └── TOP_SKUS_BY_REVENUE.sql
 │
 ├── tableau/
-│   └── Project_amazon_sales_analysis.twbx
+│ └── Project_amazon_sales_analysis.twbx
 │
 └── README.md
 
-f. Excel Dashboard Preview
-___________________________
+Dashboard Previews
 
-Initial exploratory dashboard built in Excel using Pivot Charts and summary annotations.
-![Excel Dashboard Preview](docs/EXCEL_DASHBOARD_SUMMARY.png)
+Excel Dashboard Summary
+Exploratory dashboard built with pivot charts and calculated KPIs.
+![Excel Dashboard_Summary](docs/EXCEL_DASHBOARD_SUMMARY.png)
 
-g. Tableau Dashboard Preview
-_____________________________
-
-Final Tableau dashboard integrating all major KPIs and insights.
--📎 View on Tableau Public- https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
+Tableau Dashboard Summary
+![Tableau Dashboard Summary](docs/Tableau_Dashboard_summary.png)
 
 
+Link: https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
 
-👤 Author
+Author:
 
-Akshat
-📈 Data Analytics | SQL | Python | Excel | Tableau
-📧 theconquerer357.email@gmail.com
+Akshat Verma
+Data Analytics | SQL | Python | Excel | Tableau
+Email: theconquerer357@gmail.com
 
-
+LinkedIn: https://www.linkedin.com/in/akshat-verma-b5284a38a/
+GitHub: https://github.com/conquerer357/E-COMMERCE-PROJECT
