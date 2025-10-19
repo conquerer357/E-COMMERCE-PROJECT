@@ -34,21 +34,33 @@ _____________
 
 4) Tableau Dashboard: Combined key insights into an interactive dashboard summarizing sales trends and cancellations.
 
-d. Key Insights
-________________
+d. Insights
+____________
 
-1) Revenue peaked in April at ₹25.6M before seasonal decline.
+Peak sales occurred in April 2022 (₹25.6M), followed by a steady seasonal decline post-billing.
 
-2) Top 5 SKUs contributed over 50% of total sales — strong concentration.
+Revenue concentration is high across a few SKUs and regions — top 5 SKUs and top 3 states (Maharashtra, Karnataka, Tamil Nadu) drive most sales.
 
-3) North-East and island states showed highest cancellation rates.
+Cancellation behavior: ~59% of cancellations occur after billing, pointing toward refund-stage drop-offs or fulfillment delays.
 
-4) ~59% of cancellations occurred after billing, suggesting refund-stage drop-offs.
+Fulfillment performance: Merchant-handled orders show higher post-billing cancellations (~75%), indicating seller-side dispatch or QC bottlenecks.
 
-5) Merchant-fulfilled orders had higher post-billing cancellations (≈75%) than Amazon-fulfilled (≈49%).
+Regional imbalance: North-East and Island states show disproportionately high cancellation rates — likely due to logistic limitations or limited serviceability.
 
+e. Recommendations
+____________________
 
-e. Project Structure
+Optimize logistics in North-East and Island regions — improve delivery SLAs and communication during checkout.
+
+Review seller performance for Merchant-fulfilled orders; consider shifting high-volume SKUs to Amazon-fulfillment.
+
+Encourage SKU diversification — promote lower-performing SKUs in high-revenue regions to balance sales.
+
+Introduce predictive cancellation scoring using historical order behavior to flag risky orders pre-billing.
+
+Maintain April-level engagement strategies (ads, offers) into later months to stabilize revenue.
+
+f. Project Structure
 _____________________
 
 
