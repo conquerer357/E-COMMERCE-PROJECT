@@ -13,6 +13,7 @@ This analysis focuses on uncovering:
 3) Cancellation statistics by states.
 4) Cancellation statistics by billing timing, pre vs post.
 5) Fulfillment performance, Amazon vs Merchant.
+6) Revenue of SKUS by state.
 
 
 b. Tools Used
@@ -64,50 +65,53 @@ f. Project Structure
 _____________________
 
 
-Project Structure
-
 E-COMMERCE-PROJECT/
 │
 ├── data/
-│ └── raw/
-│ ├── Amazon Sale Report.csv
-│ ├── Cloud Warehouse.csv
-│ ├── Expense IIGF.csv
-│ ├── International Sale Report.csv
-│ ├── May-2022.csv
-│ └── P L March 2021.csv
+│   ├── raw/                          # Original unprocessed CSV exports
+│   │   ├── Amazon Sale Report.csv
+│   │   ├── Cloud Warehouse.csv
+│   │   ├── Expense IIGF.csv
+│   │   ├── International Sale Report.csv
+│   │   ├── May-2022.csv
+│   │   └── P&L March 2021.csv
+│   │
+│   ├── export/                       # Cleaned datasets used for analysis
+│   │   ├── cancellations_by_state.csv
+│   │   ├── cancellation_pre_post_billing.csv
+│   │   ├── cancellations_story.csv
+│   │   ├── monthly_revenue.csv
+│   │   ├── TOP_SKUS_BY_REVENUE.csv
+│   │   └── sku_sales_by_state.csv
 │
-├── export/
-│ ├── cancellations_story.csv
-│ ├── monthly_revenue.csv
-│ ├── TOP_SKUS_BY_REVENUE.csv
-│ ├── cancellations_by_state.csv
-│ ├── cancellation_pre_post_billing.csv
-│ └── cancellations_by_fulfillment.csv
+├── sql/                              # PostgreSQL queries for metrics generation
+│   ├── monthly_revenue.sql
+│   ├── top_skus_by_revenue.sql
+│   ├── cancellations_by_state.sql
+│   ├── cancellations_by_fulfillment.sql
+│   ├── cancellation_split_pre_post.sql
+│   └── sku_sales_by_state.sql
 │
-├── docs/
-│ ├── schema_audit.txt
-│ ├── EXCEL_DASHBOARD_SUMMARY.png
-│ └── Tableau_Dashboard_Summary.png
+├── python/                           # Supporting scripts for data preprocessing
+│   ├── data_cleaning.py
+│   └── intro.py
 │
-├── EXCEL/
-│ └── Project.xlsx
+├── EXCEL/                            # Excel dashboard and visual summary
+│   ├── Project.xlsx
+│   └── EXCEL_DASHBOARD_SUMMARY.png
 │
-├── python/
-│ ├── data_cleaning.py
-│ └── intro.py
+├── tableau/                          # Tableau workbook and interactive visuals
+│   ├── Project_amazon_sales_analysis.twbx
+│   └── Tableau_Dashboard_SUMMARY.png
 │
-├── sql/
-│ ├── monthly_revenue.sql
-│ ├── cancellations_by_state.sql
-│ ├── cancellations_story.sql
-│ ├── cancellation_pre_post_billing.sql
-│ └── TOP_SKUS_BY_REVENUE.sql
+├── docs/                             # Documentation and metadata
+│   ├── schema_audit.txt
+│   └── README.md
 │
-├── tableau/
-│ └── Project_amazon_sales_analysis.twbx
-│
-└── README.md
+├── README.md                         # Main documentation
+
+
+
 
 Dashboard Previews
 
@@ -116,7 +120,7 @@ Exploratory dashboard built with pivot charts and calculated KPIs.
 ![Excel Dashboard_Summary](docs/EXCEL_DASHBOARD_SUMMARY.png)
 
 Tableau Dashboard Summary
-![Tableau Dashboard Summary](docs/Tableau_Dashboard_summary.png)
+![Tableau Dashboard Summary](docs/Tableau_Dashboard_Summary.png)
 
 
 Link: https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
