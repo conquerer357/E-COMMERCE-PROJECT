@@ -100,7 +100,6 @@ E-COMMERCE-PROJECT/
 │   ├── Project.xlsx
 │   └── EXCEL_DASHBOARD_SUMMARY.png
 │
-├── tableau/                          # Tableau workbook and interactive visuals
 │   ├── Project_amazon_sales_analysis.twbx
 │   └── Tableau_Dashboard_SUMMARY.png
 │
