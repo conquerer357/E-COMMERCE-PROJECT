@@ -100,6 +100,7 @@ E-COMMERCE-PROJECT/
 │   ├── Project.xlsx
 │   └── EXCEL_DASHBOARD_SUMMARY.png
 │
+├── Tableau/                          # Tableau workbook and interactive visuals
 │   ├── Project_amazon_sales_analysis.twbx
 │   └── Tableau_Dashboard_SUMMARY.png
 │
@@ -119,6 +120,7 @@ Exploratory dashboard built with pivot charts and calculated KPIs.
 ![Excel Dashboard_Summary](EXCEL/EXCEL_DASHBOARD_SUMMARY.png)
 
 Tableau Dashboard Summary
+![Tableau Dashboard Summary](Tableau/Tableau_Dashboard_Summary.png)
 Link: https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
 
 Author:
