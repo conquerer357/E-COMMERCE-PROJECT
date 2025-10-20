@@ -121,6 +121,8 @@ Exploratory dashboard built with pivot charts and calculated KPIs.
 
 Tableau Dashboard Summary
 ![Tableau Dashboard Summary](Tableau/Tableau_Dashboard_Summary.png)
+
+
 Link: https://public.tableau.com/app/profile/akshat.verma12/viz/Project_amazon_sales_analysis/Analysis_summary
 
 Author:
