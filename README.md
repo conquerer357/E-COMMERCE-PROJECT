@@ -19,7 +19,7 @@ An end-to-end data analytics project analyzing Amazon fashion sales across Q2 20
         shipping_speed_completion.csv
 
     raw data\
-        amazon_sales_raw.csv
+        Amazon Sale Report.csv
 
     tableau\
         amazon_sales_dashboard.twbx
