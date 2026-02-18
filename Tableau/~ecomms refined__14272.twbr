@@ -1,0 +1,2927 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0912.2314                               -->
+<workbook original-version='18.1' source-build='2025.2.3 (20252.25.0912.2314)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cancellation_by_fulfilled_by' inline='true' name='federated.0w4nuvy02tax0n1el5p5j01hilhy' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cancellation_by_fulfilled_by' name='textscan.1qrbyx219ckytl1c32zej14t83cq'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='cancellation_by_fulfilled_by.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1qrbyx219ckytl1c32zej14t83cq' name='cancellation_by_fulfilled_by.csv' table='[cancellation_by_fulfilled_by#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='fulfilled_by' ordinal='0' />
+            <column datatype='integer' name='total_orders' ordinal='1' />
+            <column datatype='integer' name='cancelled_orders' ordinal='2' />
+            <column datatype='real' name='cancellation_rate' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cancellation_by_fulfilled_by.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fulfilled_by</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fulfilled_by]</local-name>
+            <parent-name>[cancellation_by_fulfilled_by.csv]</parent-name>
+            <remote-alias>fulfilled_by</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[cancellation_by_fulfilled_by.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancelled_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cancelled_orders]</local-name>
+            <parent-name>[cancellation_by_fulfilled_by.csv]</parent-name>
+            <remote-alias>cancelled_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancellation_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cancellation_rate]</local-name>
+            <parent-name>[cancellation_by_fulfilled_by.csv]</parent-name>
+            <remote-alias>cancellation_rate</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='cancellation_by_fulfilled_by.csv' datatype='table' name='[__tableau_internal_object_id__].[cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB]' role='measure' type='quantitative' />
+      <column caption='Cancellation Rate' datatype='real' name='[cancellation_rate]' role='measure' type='quantitative' />
+      <column caption='Cancelled Orders' datatype='integer' name='[cancelled_orders]' role='measure' type='quantitative' />
+      <column caption='Fulfilled By' datatype='string' name='[fulfilled_by]' role='dimension' type='nominal' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_00026ma1s2qq9e0zwn5ac1o3i0y2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:37:25 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>fulfilled_by</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fulfilled_by]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fulfilled_by</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cancellation_by_fulfilled_by.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cancellation_by_fulfilled_by.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancelled_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cancelled_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancelled_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cancellation_by_fulfilled_by.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancellation_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cancellation_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancellation_rate</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cancellation_by_fulfilled_by.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cancellation_by_fulfilled_by.csv' id='cancellation_by_fulfilled_by.csv_C56656F07D6249B2919CB8DDB61FE9CB'>
+            <properties context=''>
+              <relation connection='textscan.1qrbyx219ckytl1c32zej14t83cq' name='cancellation_by_fulfilled_by.csv' table='[cancellation_by_fulfilled_by#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='fulfilled_by' ordinal='0' />
+                  <column datatype='integer' name='total_orders' ordinal='1' />
+                  <column datatype='integer' name='cancelled_orders' ordinal='2' />
+                  <column datatype='real' name='cancellation_rate' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='cancellation_by_fulfillment' inline='true' name='federated.1sky4p71woyllz1b0s8vt114mx1u' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cancellation_by_fulfillment' name='textscan.0s6ehk80jgxssq18hvz471gbnn1k'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='cancellation_by_fulfillment.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0s6ehk80jgxssq18hvz471gbnn1k' name='cancellation_by_fulfillment.csv' table='[cancellation_by_fulfillment#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='fulfilment' ordinal='0' />
+            <column datatype='integer' name='total_orders' ordinal='1' />
+            <column datatype='integer' name='cancelled_orders' ordinal='2' />
+            <column datatype='real' name='total_revenue' ordinal='3' />
+            <column datatype='real' name='lost_revenue' ordinal='4' />
+            <column datatype='real' name='cancellation_rate' ordinal='5' />
+            <column datatype='real' name='lost_revenue_pct' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fulfilment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fulfilment]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>fulfilment</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancelled_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cancelled_orders]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>cancelled_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lost_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lost_revenue]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>lost_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cancellation_rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cancellation_rate]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>cancellation_rate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lost_revenue_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lost_revenue_pct]</local-name>
+            <parent-name>[cancellation_by_fulfillment.csv]</parent-name>
+            <remote-alias>lost_revenue_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='cancellation_by_fulfillment.csv' datatype='table' name='[__tableau_internal_object_id__].[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]' role='measure' type='quantitative' />
+      <column caption='Cancellation Rate' datatype='real' name='[cancellation_rate]' role='measure' type='quantitative' />
+      <column caption='Cancelled Orders' datatype='integer' name='[cancelled_orders]' role='measure' type='quantitative' />
+      <column caption='Fulfilment' datatype='string' name='[fulfilment]' role='dimension' type='nominal' />
+      <column caption='Lost Revenue' datatype='real' name='[lost_revenue]' role='measure' type='quantitative' />
+      <column caption='Lost Revenue Pct' datatype='real' name='[lost_revenue_pct]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column-instance column='[fulfilment]' derivation='None' name='[none:fulfilment:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_0qaegk71907oix1fjifha1izw0ud.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:37:33 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>fulfilment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fulfilment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fulfilment</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancelled_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cancelled_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancelled_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lost_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lost_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lost_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cancellation_rate</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cancellation_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cancellation_rate</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lost_revenue_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lost_revenue_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lost_revenue_pct</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cancellation_by_fulfillment.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:fulfilment:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;merchant&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;amazon&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cancellation_by_fulfillment.csv' id='cancellation_by_fulfillment.csv_2A238E11DD6044489FD33670EC131ADB'>
+            <properties context=''>
+              <relation connection='textscan.0s6ehk80jgxssq18hvz471gbnn1k' name='cancellation_by_fulfillment.csv' table='[cancellation_by_fulfillment#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='fulfilment' ordinal='0' />
+                  <column datatype='integer' name='total_orders' ordinal='1' />
+                  <column datatype='integer' name='cancelled_orders' ordinal='2' />
+                  <column datatype='real' name='total_revenue' ordinal='3' />
+                  <column datatype='real' name='lost_revenue' ordinal='4' />
+                  <column datatype='real' name='cancellation_rate' ordinal='5' />
+                  <column datatype='real' name='lost_revenue_pct' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='monthly_revenue_trends' inline='true' name='federated.1rcmrsy1h8zjoj12eh8w30217e0y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='monthly_revenue_trends' name='textscan.1bf9s4w1qve3o316m48mj1pb6bqh'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='monthly_revenue_trends.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1bf9s4w1qve3o316m48mj1pb6bqh' name='monthly_revenue_trends.csv' table='[monthly_revenue_trends#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='month' ordinal='0' />
+            <column datatype='real' name='total_revenue' ordinal='1' />
+            <column datatype='integer' name='total_orders' ordinal='2' />
+            <column datatype='real' name='avg_order_value' ordinal='3' />
+            <column datatype='real' name='revenue_change_pct' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_order_value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_order_value]</local-name>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias>avg_order_value</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_change_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue_change_pct]</local-name>
+            <parent-name>[monthly_revenue_trends.csv]</parent-name>
+            <remote-alias>revenue_change_pct</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='monthly_revenue_trends.csv' datatype='table' name='[__tableau_internal_object_id__].[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]' role='measure' type='quantitative' />
+      <column caption='Avg Order Value' datatype='real' name='[avg_order_value]' role='measure' type='quantitative' />
+      <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;2022-03&quot;' value='March' />
+          <alias key='&quot;2022-04&quot;' value='April' />
+          <alias key='&quot;2022-05&quot;' value='May' />
+          <alias key='&quot;2022-06&quot;' value='June' />
+        </aliases>
+      </column>
+      <column caption='Revenue Change Pct' datatype='real' name='[revenue_change_pct]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column-instance column='[avg_order_value]' derivation='Avg' name='[avg:avg_order_value:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_orders]' derivation='Count' name='[cnt:total_orders:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_orders]' derivation='CountD' name='[ctd:total_orders:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[avg_order_value]' derivation='Sum' name='[sum:avg_order_value:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[revenue_change_pct]' derivation='Sum' name='[sum:revenue_change_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_12fuj9t13mwxc0104g4bv0yqkhww.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:37:40 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>0</ordinal>
+              <family>monthly_revenue_trends.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>1</ordinal>
+              <family>monthly_revenue_trends.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>monthly_revenue_trends.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>avg_order_value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[avg_order_value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>avg_order_value</remote-alias>
+              <ordinal>3</ordinal>
+              <family>monthly_revenue_trends.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue_change_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[revenue_change_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue_change_pct</remote-alias>
+              <ordinal>4</ordinal>
+              <family>monthly_revenue_trends.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[cnt:total_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[ctd:total_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]&quot;</bucket>
+            </map>
+            <map to='#cf3e53'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_orders:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[avg:avg_order_value:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:avg_order_value:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:revenue_change_pct:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='monthly_revenue_trends.csv' id='monthly_revenue_trends.csv_B119511EDF10458790326F0576F1D8FD'>
+            <properties context=''>
+              <relation connection='textscan.1bf9s4w1qve3o316m48mj1pb6bqh' name='monthly_revenue_trends.csv' table='[monthly_revenue_trends#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='month' ordinal='0' />
+                  <column datatype='real' name='total_revenue' ordinal='1' />
+                  <column datatype='integer' name='total_orders' ordinal='2' />
+                  <column datatype='real' name='avg_order_value' ordinal='3' />
+                  <column datatype='real' name='revenue_change_pct' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='revenue_by_category' inline='true' name='federated.1n30hki1dq961i14pxtde1ekozq8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='revenue_by_category' name='textscan.0qrvpxz1ocboql1b8ij5y12v6t69'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='revenue_by_category.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0qrvpxz1ocboql1b8ij5y12v6t69' name='revenue_by_category.csv' table='[revenue_by_category#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='category' ordinal='0' />
+            <column datatype='real' name='total_revenue' ordinal='1' />
+            <column datatype='integer' name='total_orders' ordinal='2' />
+            <column datatype='real' name='pct_of_total_revenue' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[revenue_by_category.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[revenue_by_category.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[revenue_by_category.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[revenue_by_category.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_of_total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_of_total_revenue]</local-name>
+            <parent-name>[revenue_by_category.csv]</parent-name>
+            <remote-alias>pct_of_total_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='revenue_by_category.csv' datatype='table' name='[__tableau_internal_object_id__].[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;ethnic_dress&quot;' value='ethnic dress' />
+          <alias key='&quot;western_dress&quot;' value='western dress' />
+        </aliases>
+      </column>
+      <column caption='Pct Of Total Revenue' datatype='real' name='[pct_of_total_revenue]' role='measure' type='quantitative' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_1bkfx6j0qdbvxi19ccg7u1bdz9ee.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:37:58 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>0</ordinal>
+              <family>revenue_by_category.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>1</ordinal>
+              <family>revenue_by_category.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>revenue_by_category.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_of_total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_of_total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_of_total_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>revenue_by_category.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='revenue_by_category.csv' id='revenue_by_category.csv_152E9DC38E274A2FBB263D950989104E'>
+            <properties context=''>
+              <relation connection='textscan.0qrvpxz1ocboql1b8ij5y12v6t69' name='revenue_by_category.csv' table='[revenue_by_category#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='category' ordinal='0' />
+                  <column datatype='real' name='total_revenue' ordinal='1' />
+                  <column datatype='integer' name='total_orders' ordinal='2' />
+                  <column datatype='real' name='pct_of_total_revenue' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='revenue_by_category_size' inline='true' name='federated.0um6nky0cehy8d1dxk8qz0lkm5ks' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='revenue_by_category_size' name='textscan.0tcltg60kl0egi18ua6va15s4zao'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='revenue_by_category_size.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0tcltg60kl0egi18ua6va15s4zao' name='revenue_by_category_size.csv' table='[revenue_by_category_size#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='category' ordinal='0' />
+            <column datatype='string' name='size' ordinal='1' />
+            <column datatype='real' name='total_revenue' ordinal='2' />
+            <column datatype='integer' name='total_orders' ordinal='3' />
+            <column datatype='real' name='pct_of_total_revenue' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[size]</local-name>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias>size</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_of_total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_of_total_revenue]</local-name>
+            <parent-name>[revenue_by_category_size.csv]</parent-name>
+            <remote-alias>pct_of_total_revenue</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='revenue_by_category_size.csv' datatype='table' name='[__tableau_internal_object_id__].[revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Pct Of Total Revenue' datatype='real' name='[pct_of_total_revenue]' role='measure' type='quantitative' />
+      <column caption='Size' datatype='string' name='[size]' role='dimension' type='nominal' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_0qq07kv1q96x3816tmkgv0bu9hzk.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:38:07 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category</remote-alias>
+              <ordinal>0</ordinal>
+              <family>revenue_by_category_size.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>size</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[size]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>size</remote-alias>
+              <ordinal>1</ordinal>
+              <family>revenue_by_category_size.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>2</ordinal>
+              <family>revenue_by_category_size.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>57</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>3</ordinal>
+              <family>revenue_by_category_size.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_of_total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_of_total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_of_total_revenue</remote-alias>
+              <ordinal>4</ordinal>
+              <family>revenue_by_category_size.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='revenue_by_category_size.csv' id='revenue_by_category_size.csv_1662018B63C9498EB62CC00E17084FC1'>
+            <properties context=''>
+              <relation connection='textscan.0tcltg60kl0egi18ua6va15s4zao' name='revenue_by_category_size.csv' table='[revenue_by_category_size#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='category' ordinal='0' />
+                  <column datatype='string' name='size' ordinal='1' />
+                  <column datatype='real' name='total_revenue' ordinal='2' />
+                  <column datatype='integer' name='total_orders' ordinal='3' />
+                  <column datatype='real' name='pct_of_total_revenue' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='revenue_by_state' inline='true' name='federated.09t7zro0u1bvj11gphsb30c7zwxj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='revenue_by_state' name='textscan.1kj1opj0nrsxf51gg09qc11cerzm'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='revenue_by_state.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1kj1opj0nrsxf51gg09qc11cerzm' name='revenue_by_state.csv' table='[revenue_by_state#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ship_state' ordinal='0' />
+            <column datatype='real' name='total_revenue' ordinal='1' />
+            <column datatype='integer' name='total_orders' ordinal='2' />
+            <column datatype='real' name='pct_of_total_revenue' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[revenue_by_state.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ship_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ship_state]</local-name>
+            <parent-name>[revenue_by_state.csv]</parent-name>
+            <remote-alias>ship_state</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[revenue_by_state.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[revenue_by_state.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_of_total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_of_total_revenue]</local-name>
+            <parent-name>[revenue_by_state.csv]</parent-name>
+            <remote-alias>pct_of_total_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='revenue_by_state.csv' datatype='table' name='[__tableau_internal_object_id__].[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]' role='measure' type='quantitative' />
+      <column caption='Pct Of Total Revenue' datatype='real' name='[pct_of_total_revenue]' role='measure' type='quantitative' />
+      <column caption='Ship State' datatype='string' name='[ship_state]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <aliases>
+          <alias key='&quot;andaman_&amp;_nicobar&quot;' value='andaman &amp; nicobar' />
+          <alias key='&quot;andhra_pradesh&quot;' value='andhra pradesh' />
+          <alias key='&quot;arunachal_pradesh&quot;' value='arunachal pradesh' />
+          <alias key='&quot;dadra_and_nagar&quot;' value='dadra and nagar' />
+          <alias key='&quot;himachal_pradesh&quot;' value='himachal pradesh' />
+          <alias key='&quot;jammu_&amp;_kashmir&quot;' value='jammu &amp; kashmir' />
+          <alias key='&quot;madhya_pradesh&quot;' value='madhya pradesh' />
+          <alias key='&quot;tamil_nadu&quot;' value='tamil nadu' />
+          <alias key='&quot;uttar_pradesh&quot;' value='uttar pradesh' />
+          <alias key='&quot;west_bengal&quot;' value='west bengal' />
+        </aliases>
+      </column>
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column-instance column='[ship_state]' derivation='None' name='[none:ship_state:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_167cpf91klcvnl1dkk3b20wx3o2t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:38:14 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ship_state</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ship_state]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ship_state</remote-alias>
+              <ordinal>0</ordinal>
+              <family>revenue_by_state.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>1</ordinal>
+              <family>revenue_by_state.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>revenue_by_state.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_of_total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_of_total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_of_total_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>revenue_by_state.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:ship_state:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;goa&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;telangana&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;andaman_&amp;_nicobar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;meghalaya&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;bihar&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;punjab&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;jammu_&amp;_kashmir&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;west_bengal&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;gujarat&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;tripura&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;chhattisgarh&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;rajasthan&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;maharashtra&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;andhra_pradesh&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;mizoram&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;lakshadweep&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;dadra_and_nagar&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;sikkim&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;jharkhand&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;karnataka&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;madhya_pradesh&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;manipur&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;haryana&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;uttar_pradesh&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;delhi&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;tamil_nadu&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;arunachal_pradesh&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;nagaland&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;kerala&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;himachal_pradesh&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;uttarakhand&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;assam&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;odisha&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='revenue_by_state.csv' id='revenue_by_state.csv_3BAFBB8C876F4DA5BB7077C0FA5F0C28'>
+            <properties context=''>
+              <relation connection='textscan.1kj1opj0nrsxf51gg09qc11cerzm' name='revenue_by_state.csv' table='[revenue_by_state#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='ship_state' ordinal='0' />
+                  <column datatype='real' name='total_revenue' ordinal='1' />
+                  <column datatype='integer' name='total_orders' ordinal='2' />
+                  <column datatype='real' name='pct_of_total_revenue' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='shipping_speed_completion' inline='true' name='federated.1h95lex1s0r2oe15q7ico0d4inpk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='shipping_speed_completion' name='textscan.1a29kxd1ib5axk1bpdn0j0rcwoi1'>
+            <connection class='textscan' directory='C:/Documents/Data analytics/projects/my-data-project/E-COMMERCE-PROJECT/data/Queried' filename='shipping_speed_completion.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1a29kxd1ib5axk1bpdn0j0rcwoi1' name='shipping_speed_completion.csv' table='[shipping_speed_completion#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='ship_service_level' ordinal='0' />
+            <column datatype='string' name='status' ordinal='1' />
+            <column datatype='integer' name='total_orders' ordinal='2' />
+            <column datatype='real' name='total_revenue' ordinal='3' />
+            <column datatype='integer' name='group_total' ordinal='4' />
+            <column datatype='real' name='pct_of_group' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ship_service_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ship_service_level]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>ship_service_level</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_orders</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_orders]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>total_orders</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_revenue]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>total_revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>group_total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[group_total]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>group_total</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pct_of_group</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pct_of_group]</local-name>
+            <parent-name>[shipping_speed_completion.csv]</parent-name>
+            <remote-alias>pct_of_group</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='shipping_speed_completion.csv' datatype='table' name='[__tableau_internal_object_id__].[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]' role='measure' type='quantitative' />
+      <column caption='Group Total' datatype='integer' name='[group_total]' role='measure' type='quantitative' />
+      <column caption='Pct Of Group' datatype='real' name='[pct_of_group]' role='measure' type='quantitative' />
+      <column caption='Ship Service Level' datatype='string' name='[ship_service_level]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+      <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+      <column-instance column='[ship_service_level]' derivation='None' name='[none:ship_service_level:nk]' pivot='key' type='nominal' />
+      <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/PC/AppData/Local/Temp/TableauTemp/#TableauTemp_1g0l93a144lavr18ojy7v0yquhzg.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/09/2026 02:38:21 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ship_service_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ship_service_level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ship_service_level</remote-alias>
+              <ordinal>0</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status</remote-alias>
+              <ordinal>1</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_orders</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[total_orders]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_orders</remote-alias>
+              <ordinal>2</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_revenue</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>group_total</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[group_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>group_total</remote-alias>
+              <ordinal>4</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pct_of_group</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pct_of_group]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pct_of_group</remote-alias>
+              <ordinal>5</ordinal>
+              <family>shipping_speed_completion.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:status:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;shipped_picked_up&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;shipped&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;shipped_damaged&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;pending&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;shipping&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;shipped_rejected_by_buyer&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;shipped_delivered_to_buyer&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;shipped_lost_in_transit&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;cancelled&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;shipped_returned_to_seller&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;shipped_out_for_delivery&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;pending_waiting_for_pick_up&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;shipped_returning_to_seller&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:ship_service_level:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;expedited&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;standard&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='shipping_speed_completion.csv' id='shipping_speed_completion.csv_21C98AA25FBE435B8901F593A0EB4B0D'>
+            <properties context=''>
+              <relation connection='textscan.1a29kxd1ib5axk1bpdn0j0rcwoi1' name='shipping_speed_completion.csv' table='[shipping_speed_completion#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='ship_service_level' ordinal='0' />
+                  <column datatype='string' name='status' ordinal='1' />
+                  <column datatype='integer' name='total_orders' ordinal='2' />
+                  <column datatype='real' name='total_revenue' ordinal='3' />
+                  <column datatype='integer' name='group_total' ordinal='4' />
+                  <column datatype='real' name='pct_of_group' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average order value'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Average Order Value</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_revenue_trends' name='federated.1rcmrsy1h8zjoj12eh8w30217e0y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rcmrsy1h8zjoj12eh8w30217e0y'>
+            <column-instance column='[avg_order_value]' derivation='Avg' name='[avg:avg_order_value:qk]' pivot='key' type='quantitative' />
+            <column caption='Avg Order Value' datatype='real' name='[avg_order_value]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[avg:avg_order_value:qk]' value='c&quot;₹ &quot;#,##0;&quot;₹ &quot;-#,##0' />
+            <format attr='font-size' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[avg:avg_order_value:qk]' value='48' />
+            <format attr='font-weight' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[avg:avg_order_value:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[avg:avg_order_value:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{8E952A67-357F-4679-A2CA-03D660271300}' />
+    </worksheet>
+    <worksheet name='Cancellation Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Cancellation Rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cancellation_by_fulfillment' name='federated.1sky4p71woyllz1b0s8vt114mx1u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sky4p71woyllz1b0s8vt114mx1u'>
+            <column-instance column='[cancellation_rate]' derivation='Avg' name='[avg:cancellation_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Cancellation Rate' datatype='real' name='[cancellation_rate]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+            <format attr='font-size' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='48' />
+            <format attr='font-weight' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1448932E-EB8F-4F6C-94C4-83CDFBF3E735}' />
+    </worksheet>
+    <worksheet name='FulFillment Performance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cancellation_by_fulfillment' name='federated.1sky4p71woyllz1b0s8vt114mx1u' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1sky4p71woyllz1b0s8vt114mx1u'>
+            <column-instance column='[cancellation_rate]' derivation='Avg' name='[avg:cancellation_rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[lost_revenue_pct]' derivation='Avg' name='[avg:lost_revenue_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Cancellation Rate' datatype='real' name='[cancellation_rate]' role='measure' type='quantitative' />
+            <column caption='Fulfilment' datatype='string' name='[fulfilment]' role='dimension' type='nominal' />
+            <column caption='Lost Revenue Pct' datatype='real' name='[lost_revenue_pct]' role='measure' type='quantitative' />
+            <column-instance column='[fulfilment]' derivation='None' name='[none:fulfilment:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' scope='rows' value='Avg Cancellation Rate' />
+            <format attr='title' class='0' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk]' scope='rows' value='Lost Revenue ' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' value='241' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='bold' />
+            <format attr='text-format' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+            <format attr='font-weight' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk]' value='bold' />
+            <format attr='text-format' field='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.38381215929985046' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.38381215929985046' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:cancellation_rate:qk] + [federated.1sky4p71woyllz1b0s8vt114mx1u].[avg:lost_revenue_pct:qk])</rows>
+        <cols>[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]</cols>
+      </table>
+      <simple-id uuid='{B988AE05-784B-4957-84EA-FE6BF28992DF}' />
+    </worksheet>
+    <worksheet name='Monthly Trends'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='18'>Monthly Trends </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_revenue_trends' name='federated.1rcmrsy1h8zjoj12eh8w30217e0y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rcmrsy1h8zjoj12eh8w30217e0y'>
+            <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;2022-03&quot;' value='March' />
+                <alias key='&quot;2022-04&quot;' value='April' />
+                <alias key='&quot;2022-05&quot;' value='May' />
+                <alias key='&quot;2022-06&quot;' value='June' />
+              </aliases>
+            </column>
+            <column-instance column='[month]' derivation='None' name='[none:month:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' field-type='quantitative' major-origin='0.0' major-spacing='5000000.0' scope='rows' type='space' />
+            <format attr='stroke-color' value='#000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[none:month:nk]' value='380' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[none:month:nk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' value='c&quot;₹&quot;#,##0,,M;&quot;₹&quot;-#,##0,,M' />
+            <format attr='font-weight' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' value='bold' />
+            <format attr='font-weight' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[none:month:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#555555' />
+                <format attr='size' value='0.20790055394172668' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-visibility' value='on' />
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='1' />
+                <format attr='stroke-color' value='#33333367' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]</rows>
+        <cols>[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[none:month:nk]</cols>
+      </table>
+      <simple-id uuid='{9C3E3FFA-75C9-499B-88C5-E74088C26C45}' />
+    </worksheet>
+    <worksheet name='Revenue By State'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='18'>&lt;Sheet Name&gt; (Top 10)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='revenue_by_state' name='federated.09t7zro0u1bvj11gphsb30c7zwxj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09t7zro0u1bvj11gphsb30c7zwxj'>
+            <column-instance column='[ship_state]' derivation='None' name='[none:ship_state:nk]' pivot='key' type='nominal' />
+            <column caption='Ship State' datatype='string' name='[ship_state]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <aliases>
+                <alias key='&quot;andaman_&amp;_nicobar&quot;' value='andaman &amp; nicobar' />
+                <alias key='&quot;andhra_pradesh&quot;' value='andhra pradesh' />
+                <alias key='&quot;arunachal_pradesh&quot;' value='arunachal pradesh' />
+                <alias key='&quot;dadra_and_nagar&quot;' value='dadra and nagar' />
+                <alias key='&quot;himachal_pradesh&quot;' value='himachal pradesh' />
+                <alias key='&quot;jammu_&amp;_kashmir&quot;' value='jammu &amp; kashmir' />
+                <alias key='&quot;madhya_pradesh&quot;' value='madhya pradesh' />
+                <alias key='&quot;tamil_nadu&quot;' value='tamil nadu' />
+                <alias key='&quot;uttar_pradesh&quot;' value='uttar pradesh' />
+                <alias key='&quot;west_bengal&quot;' value='west bengal' />
+              </aliases>
+            </column>
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([total_revenue])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:ship_state:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' field-type='quantitative' major-origin='0.0' major-spacing='2500000.0' scope='cols' type='space' />
+            <format attr='stroke-color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' value='bold' />
+            <format attr='text-format' field='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' value='c&quot;₹ &quot;#,##0,,M;&quot;₹ &quot;-#,##0,,M' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]</rows>
+        <cols>[federated.09t7zro0u1bvj11gphsb30c7zwxj].[sum:total_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{7E05657D-5C11-45F8-AC6E-8408039823CA}' />
+    </worksheet>
+    <worksheet name='Revenue by category'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='18'>Revenue By Dress Category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='revenue_by_category' name='federated.1n30hki1dq961i14pxtde1ekozq8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1n30hki1dq961i14pxtde1ekozq8'>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;ethnic_dress&quot;' value='ethnic dress' />
+                <alias key='&quot;western_dress&quot;' value='western dress' />
+              </aliases>
+            </column>
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' field-type='quantitative' major-origin='0.0' major-spacing='8000000.0' scope='cols' type='space' />
+            <format attr='stroke-color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' value='bold' />
+            <format attr='text-format' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' value='c&quot;₹ &quot;#,##0,,M;&quot;₹ &quot;-#,##0,,M' />
+            <format attr='font-weight' field='[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]' />
+              <text column='[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]' z-order='1' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='off' />
+                <format attr='vertical-align' value='bottom' />
+                <format attr='text-align' value='right' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1n30hki1dq961i14pxtde1ekozq8].[none:category:nk]</rows>
+        <cols>[federated.1n30hki1dq961i14pxtde1ekozq8].[sum:total_revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{5496893D-5D03-4726-9E20-068E4BC6905C}' />
+    </worksheet>
+    <worksheet name='Shipping Speed Comparison'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='shipping_speed_completion' name='federated.1h95lex1s0r2oe15q7ico0d4inpk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1h95lex1s0r2oe15q7ico0d4inpk'>
+            <column-instance column='[pct_of_group]' derivation='Avg' name='[avg:pct_of_group:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ship_service_level]' derivation='None' name='[none:ship_service_level:nk]' pivot='key' type='nominal' />
+            <column-instance column='[status]' derivation='None' name='[none:status:nk]' pivot='key' type='nominal' />
+            <column caption='Pct Of Group' datatype='real' name='[pct_of_group]' role='measure' type='quantitative' />
+            <column caption='Ship Service Level' datatype='string' name='[ship_service_level]' role='dimension' type='nominal' />
+            <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:status:nk]' member='&quot;cancelled&quot;' />
+              <groupfilter function='member' level='[none:status:nk]' member='&quot;pending&quot;' />
+              <groupfilter function='member' level='[none:status:nk]' member='&quot;shipped&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]' scope='rows' value='Avg Pct Of Group' />
+            <format attr='stroke-color' value='#000000' />
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]' value='100' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]' value='#e6e6e6' />
+            <format attr='background-color' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]' value='n#,##0&quot;%&quot;;-#,##0&quot;%&quot;' />
+            <format attr='font-weight' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]' value='bold' />
+            <format attr='font-weight' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk]' value='bold' />
+            <format attr='font-weight' field='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:ship_service_level:nk]' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:ship_service_level:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1h95lex1s0r2oe15q7ico0d4inpk].[avg:pct_of_group:qk]</rows>
+        <cols>([federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:ship_service_level:nk] / [federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:status:nk])</cols>
+      </table>
+      <simple-id uuid='{91A155D2-B70C-45C6-84A4-6D2686F3E8D4}' />
+    </worksheet>
+    <worksheet name='Total orders'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Total orders</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_revenue_trends' name='federated.1rcmrsy1h8zjoj12eh8w30217e0y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rcmrsy1h8zjoj12eh8w30217e0y'>
+            <column-instance column='[total_orders]' derivation='Sum' name='[sum:total_orders:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Orders' datatype='integer' name='[total_orders]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='48' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_orders:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_orders:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{74D41BDF-8D30-4A0C-B22B-6739688CED89}' />
+    </worksheet>
+    <worksheet name='Total revenue'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='18'>Total revenue</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='monthly_revenue_trends' name='federated.1rcmrsy1h8zjoj12eh8w30217e0y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1rcmrsy1h8zjoj12eh8w30217e0y'>
+            <column-instance column='[total_revenue]' derivation='Sum' name='[sum:total_revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Revenue' datatype='real' name='[total_revenue]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' value='c&quot;₹ &quot;#,##0,,M;&quot;₹ &quot;-#,##0,,M' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='48' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1rcmrsy1h8zjoj12eh8w30217e0y].[sum:total_revenue:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DD70DB67-E08F-421B-8335-350541F1230A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size maxheight='1260' maxwidth='1650' minheight='560' minwidth='420' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='99836' id='25' param='horz' type-v2='layout-flow' w='99878' x='61' y='82'>
+            <zone h='99836' id='12' type-v2='layout-basic' w='99878' x='61' y='82'>
+              <zone forceUpdate='true' h='6120' id='3' type-v2='text' w='99878' x='61' y='82'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='24' underline='true'>Amazon Sales Analysis (March-June)</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='0' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='13227' id='6' param='horz' type-v2='layout-flow' w='99878' x='61' y='6202'>
+                <zone fixed-size='366' h='13227' id='7' is-fixed='true' name='Total orders' w='22424' x='61' y='6202'>
+                  <layout-cache fixed-size-h='237' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='2' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='745' h='13227' id='8' is-fixed='true' name='Total revenue' w='25818' x='22485' y='6202'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='2' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='782' h='13227' id='9' is-fixed='true' name='Average order value' w='25818' x='48303' y='6202'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='2' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='930' h='13227' id='10' is-fixed='true' name='Cancellation Rate' w='25818' x='74121' y='6202'>
+                  <layout-cache type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='2' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='34775' id='11' name='Monthly Trends' w='33272' x='61' y='19429'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='2' />
+                  <format attr='padding' value='0' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='45714' id='16' name='Revenue by category' w='49939' x='61' y='54204'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='2' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='45714' id='17' name='Revenue By State' w='49939' x='50000' y='54204'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='2' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='34775' id='20' name='FulFillment Performance' w='33334' x='33333' y='19429'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='2' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='34775' id='23' name='Shipping Speed Comparison' w='33272' x='66667' y='19429'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='2' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='background-color' value='#ffffff' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='1' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Phone'>
+          <size maxheight='2500' minheight='2500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99920' id='30' param='vert' type-v2='layout-flow' w='99466' x='267' y='40'>
+                <zone forceUpdate='true' h='3840' id='3' type-v2='text' w='99466' x='267' y='40'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Bold' fontsize='24' underline='true'>Amazon Sales Analysis (March-June)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='163' h='6840' id='7' is-fixed='true' name='Total orders' w='99466' x='267' y='3880'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='163' h='6840' id='8' is-fixed='true' name='Total revenue' w='99466' x='267' y='10720'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='163' h='6840' id='9' is-fixed='true' name='Average order value' w='99466' x='267' y='17560'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='163' h='6840' id='10' is-fixed='true' name='Cancellation Rate' w='99466' x='267' y='24400'>
+                  <layout-cache type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11520' id='11' is-fixed='true' name='Monthly Trends' w='99466' x='267' y='31240'>
+                  <layout-cache minheight='169' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11520' id='20' is-fixed='true' name='FulFillment Performance' w='99466' x='267' y='42760'>
+                  <layout-cache minheight='270' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11520' id='23' is-fixed='true' name='Shipping Speed Comparison' w='99466' x='267' y='54280'>
+                  <layout-cache minheight='190' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11520' id='16' is-fixed='true' name='Revenue by category' w='99466' x='267' y='65800'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='11520' id='17' is-fixed='true' name='Revenue By State' w='99466' x='267' y='77320'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='1' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{CC7E4225-AA8C-4F42-A8B1-B1D747D8B778}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='156'>
+    <window class='worksheet' name='Monthly Trends'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0E0C9D08-2D2A-444F-B29B-6AB7D82DDB37}' />
+    </window>
+    <window class='worksheet' name='Total orders'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F8387D18-6060-4954-AB58-C9DCFD9FEEFA}' />
+    </window>
+    <window class='worksheet' name='Total revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D02A8638-C99B-4799-BEF4-5123AC3BC30B}' />
+    </window>
+    <window class='worksheet' name='Average order value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CD27ECBD-AEE1-47DE-AF47-BDCBD303FF20}' />
+    </window>
+    <window class='worksheet' name='Cancellation Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A2F6A779-0A81-4A43-9C4C-13EF86AD7748}' />
+    </window>
+    <window class='worksheet' name='Revenue by category'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+      </viewpoint>
+      <simple-id uuid='{E2371ACA-161D-47D5-B5F1-7C34CF844A22}' />
+    </window>
+    <window class='worksheet' name='Revenue By State'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09t7zro0u1bvj11gphsb30c7zwxj].[none:ship_state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5BB6846F-420A-4778-B059-A46CE3D32E78}' />
+    </window>
+    <window class='worksheet' name='FulFillment Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1sky4p71woyllz1b0s8vt114mx1u].[none:fulfilment:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBFA2EE9-404C-440E-8E2B-EB9F5C976F9B}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Shipping Speed Comparison'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1h95lex1s0r2oe15q7ico0d4inpk].[none:ship_service_level:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{76F79369-A11A-4663-948E-94E7B1ADCDA0}' />
+    </window>
+    <window class='dashboard' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='Average order value'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Cancellation Rate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='FulFillment Performance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Monthly Trends'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue By State'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue by category'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Shipping Speed Comparison'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total orders'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total revenue'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{B26F9346-3368-4208-8649-568154C46790}' />
+    </window>
+  </windows>
+</workbook>

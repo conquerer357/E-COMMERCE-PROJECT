@@ -1,0 +1,17 @@
+ship_service_level,status,total_orders,total_revenue,group_total,pct_of_group
+expedited,cancelled,10815,3503227.0,86531,12.5
+expedited,pending,407,264521.0,86531,0.47
+expedited,shipped,75309,49331767.0,86531,87.03
+standard,cancelled,6567,3035291.19,39710,16.54
+standard,pending,239,158160.0,39710,0.6
+standard,pending_waiting_for_pick_up,276,188199.0,39710,0.7
+standard,shipped,1024,34606.0,39710,2.58
+standard,shipped_damaged,1,1136.0,39710,0.0
+standard,shipped_delivered_to_buyer,28478,18451827.0,39710,71.71
+standard,shipped_lost_in_transit,5,1997.0,39710,0.01
+standard,shipped_out_for_delivery,35,26971.0,39710,0.09
+standard,shipped_picked_up,969,657494.0,39710,2.44
+standard,shipped_rejected_by_buyer,11,7295.0,39710,0.03
+standard,shipped_returned_to_seller,1953,1269644.0,39710,4.92
+standard,shipped_returning_to_seller,144,106505.0,39710,0.36
+standard,shipping,8,0.0,39710,0.02
