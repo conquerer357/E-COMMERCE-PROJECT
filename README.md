@@ -12,23 +12,22 @@ An end-to-end data analytics project analyzing Amazon fashion sales across Q2 20
     Analysis code\
         analysis.ipynb
 
-    Cleaned Data\
-        amazon_sales_cleaned.csv
-
     Data Cleaning code\
         data_cleaning.ipynb
 
-    Queried data\
-        cancellation_by_fulfilled_by.csv
-        cancellation_by_fulfillment.csv
-        monthly_revenue_trends.csv
-        revenue_by_category.csv
-        revenue_by_category_size.csv
-        revenue_by_state.csv
-        shipping_speed_completion.csv
-
-    raw data\
-        Amazon Sale Report.csv
+    data\
+        processed\
+            amazon_sales_cleaned.csv
+        Queried\
+            cancellation_by_fulfilled_by.csv
+            cancellation_by_fulfillment.csv
+            monthly_revenue_trends.csv
+            revenue_by_category.csv
+            revenue_by_category_size.csv
+            revenue_by_state.csv
+            shipping_speed_completion.csv
+        raw\
+            Amazon Sale Report.csv
 
     Tableau\
         ecomms refined.twb
@@ -163,28 +162,70 @@ Expected impact: Reduce cancellations by 4%, improve customer satisfaction.
 Pre-select expedited at checkout. Offer free expedited for orders above ₹1,000 (above current AOV of ₹644). A/B test messaging: "Arrives in 2 days" versus "Standard 5–7 days." Track whether faster delivery reduces the 4.9% return rate on standard orders.
 
 
-## Data Processing Workflow
+## Analysis Pipeline
 
-1. Loaded raw transaction data using Pandas read_csv()
-2. Cleaned data — removed duplicates, handled missing values, standardized date formats
-3. Created calculated fields: cancellation rates, lost revenue percentages, average order value
-4. Aggregated data by dimensions: month, category, state, fulfillment type, shipping speed
-5. Exported aggregated datasets as CSV files for Tableau ingestion
-6. Built Tableau dashboard with KPI cards, trend lines, and comparative bar charts
+The project was split into two notebook stages: a cleaning notebook that produced one modeling-ready fact table, and an analysis notebook that converted that table into Tableau-ready summary extracts.
+
+**Notebook 1 - Data cleaning**
+
+Source notebook: `Data Cleaning code/data_cleaning.ipynb`
+
+1. Loaded the raw transaction export from `data/raw/Amazon Sale Report.csv` into Pandas.
+2. Created a working copy and standardized column names by trimming whitespace, converting to lowercase, and replacing spaces and hyphens with underscores.
+3. Removed columns not used in downstream analysis: `index`, `unnamed:_22`, `ship_country`, `currency`, `ship_postal_code`, `promotion_ids`, `courier_status`, `asin`, and later `order_id` and `ship_city`.
+4. Normalized all text fields by trimming values, lowercasing them, converting separators to underscores, and converting empty strings back to nulls.
+5. Enforced a consistent schema across dates, categoricals, numeric fields, and booleans so the analysis notebook could aggregate without ad hoc type fixes.
+6. Replaced placeholder missing-value tokens such as `N/A`, `None`, `null`, and `?` with proper nulls.
+7. Dropped duplicate rows from the working table.
+8. Standardized dirty categorical labels:
+   - `status` values were cleaned by collapsing malformed underscore patterns.
+   - `ship_state` values were mapped to canonical names such as `odisha`, `rajasthan`, `uttar_pradesh`, and `jammu_&_kashmir`.
+9. Exported the cleaned dataset to `data/processed/amazon_sales_cleaned.csv`.
+
+The cleaned table contained 126,241 rows and 14 analysis columns:
+`date`, `status`, `fulfilment`, `sales_channel`, `ship_service_level`, `style`, `sku`, `category`, `size`, `qty`, `amount`, `ship_state`, `b2b`, `fulfilled_by`.
+
+**Notebook 2 - Business analysis**
+
+Source notebook: `Analysis code/analysis.ipynb`
+
+1. Loaded `data/processed/amazon_sales_cleaned.csv`.
+2. Created an `is_cancelled` flag from `status == 'cancelled'` to simplify loss-rate calculations.
+3. Built fulfillment performance tables:
+   - `cancellation_by_fulfillment.csv`: compared Amazon vs merchant fulfillment using total orders, cancelled orders, revenue, lost revenue, cancellation rate, and lost revenue percent.
+   - `cancellation_by_fulfilled_by.csv`: summarized cancellation rate by the `fulfilled_by` field.
+4. Built geography and assortment tables:
+   - `revenue_by_state.csv`: captured revenue, order count, and revenue share by state.
+   - `revenue_by_category.csv`: captured revenue, order count, and revenue share by category.
+   - `revenue_by_category_size.csv`: captured the category-size revenue mix for merchandise depth analysis.
+5. Built delivery-operations tables:
+   - `shipping_speed_completion.csv`: captured order status mix, revenue, group totals, and within-service-level percentages for each shipping service level.
+6. Built time-series tables:
+   - Converted `date` to datetime and derived a `month` field.
+   - `monthly_revenue_trends.csv`: captured monthly revenue, total orders, average order value, and month-over-month revenue change.
+7. Exported all summary tables to `data/Queried/` for Tableau consumption.
+
+**Reporting layer**
+
+The seven CSV extracts in `data/Queried/` were the direct inputs to the Tableau workbook in `Tableau/ecomms refined.twb`. Tableau was used only after the heavy lifting was finished in Pandas, so the dashboard layer stayed focused on presentation rather than data wrangling.
+
+**Implementation note**
+
+Both notebooks used absolute local file paths under the repository's `data/` directory, with raw inputs in `data/raw/`, the cleaned fact table in `data/processed/`, and Tableau-ready extracts in `data/Queried/`. 
 
 
 
 ## Metrics Definitions
 
-**Cancellation Rate** = (Cancelled Orders / Total Orders) × 100
+**Cancellation Rate** = (Cancelled Orders / Total Orders) x 100
 
-**Lost Revenue %** = (Lost Revenue / Total Potential Revenue) × 100
+**Lost Revenue %** = (Lost Revenue / Total Potential Revenue) x 100
 
 **Average Order Value** = Total Revenue / Total Orders
 
-**Month-over-Month Growth** = ((Current Month Revenue − Previous Month Revenue) / Previous Month Revenue) × 100
+**Month-over-Month Growth** = ((Current Month Revenue - Previous Month Revenue) / Previous Month Revenue) x 100
 
-**Category Concentration** = Top 3 Categories Revenue / Total Revenue × 100
+**Category Concentration** = Top 3 Categories Revenue / Total Revenue x 100
 
 
 ## Dashboard Design
