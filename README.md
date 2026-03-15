@@ -231,3 +231,5 @@ Both notebooks used absolute local file paths under the repository's `data/` dir
 ## Dashboard Design
 
 The Tableau dashboard was intentionally kept simple and clean. Rather than building an interactive tool with multiple filter panes and drill-down layers, the focus was on presenting the 6 most critical insights in a single, immediately scannable layout. This design decision reflects the audience: business stakeholders who need clear answers quickly, not an analytics playground. The visual hierarchy places KPI cards at the top, followed by trend and operational comparisons in the middle, and geographic and category breakdowns at the bottom.
+
+![Dashboard](Tableau/Dashboard.png)
