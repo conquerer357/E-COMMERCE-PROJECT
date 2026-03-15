@@ -9,7 +9,16 @@ An end-to-end data analytics project analyzing Amazon fashion sales across Q2 20
 
     C:\Documents\Data analytics\projects\my-data-project\E-COMMERCE-PROJECT
 
-    data\
+    Analysis code\
+        analysis.ipynb
+
+    Cleaned Data\
+        amazon_sales_cleaned.csv
+
+    Data Cleaning code\
+        data_cleaning.ipynb
+
+    Queried data\
         cancellation_by_fulfilled_by.csv
         cancellation_by_fulfillment.csv
         monthly_revenue_trends.csv
@@ -21,8 +30,13 @@ An end-to-end data analytics project analyzing Amazon fashion sales across Q2 20
     raw data\
         Amazon Sale Report.csv
 
-    tableau\
-        amazon_sales_dashboard.twbx
+    Tableau\
+        ecomms refined.twb
+        fulfillment performance.png
+        monthly trends.png
+        Revenue by catagory.png
+        Revenue by state.png
+        shipping speed comparison.png
 
     README.md
 
